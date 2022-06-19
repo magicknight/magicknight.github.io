@@ -50,17 +50,17 @@ a:hover {
 }
 
 .btn-dark {
-  background-color: #3c4858;
-  border-color: #3c4858;
-  color: #e5e9f2;
-  transition: all 0.3s ease-out;
+  background-color: #3c4858!important;
+  border-color: #3c4858!important;
+  color: #e5e9f2!important;
+  transition: all 0.3s ease-out!important;
 }
 
 .btn-dark:hover,
 .btn-dark:focus {
-  background-color: #248aaa;
-  border-color: #248aaa;
-  transition: all 0.3s ease-out;
+  background-color: #248aaa!important;
+  border-color: #248aaa!important;
+  transition: all 0.3s ease-out!important;
 }
 
 .btn-outline-info {
@@ -168,7 +168,13 @@ img.right {
   font-size: 10pt;
 }
 
-/* ====== codeblocks ====== */
+.flag-icon {
+  width: 16px !important;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+/* ====== table ====== */
 table {
   border-radius: 0.1rem;
   background: #e5e9f2;
@@ -198,6 +204,42 @@ tbody tr:nth-child(odd) {
 
 tbody tr:hover {
   background: #c0ccda;
+}
+
+/* ====== don't apply css to tables inside gist ====== */
+.gist table {
+  border-radius: unset;
+  background: unset;
+  border: unset;
+  padding: unset;
+}
+
+.gist table tr {
+  height: unset !important;
+}
+
+.gist table th,
+td {
+  padding: unset;
+  border-left: unset;
+  border-bottom: unset;
+}
+
+.gist table thead tr {
+  background: unset;
+  color: unset;
+}
+
+.gist tbody tr:nth-child(odd) {
+  background-color: unset;
+}
+
+.gist tbody tr:hover {
+  background: unset;
+}
+
+.gist table td, .gist table tc{
+  border-right: 1px solid #eee;
 }
 
 figure {
@@ -333,6 +375,14 @@ mark {
   background-color: #e5e9f2;
 }
 
+.footer #disclaimer{
+  color: #8392a5 !important;
+  text-align: justify;
+}
+.footer #disclaimer>strong{
+  color: #c0ccda!important;
+}
+
 .footer #theme {
   color: #c0ccda;
 }
@@ -418,16 +468,29 @@ mark {
   code {
     padding: 0px;
   }
+
+  h1 {
+    font-size: 2.2rem;
+  }
 }
 
 /* iPhoneX, iPhone 6,7,8 */
 @media only screen and (max-width: 375px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 /* Galaxy S5, Moto G4 */
 @media only screen and (max-width: 360px) {
+  h1 {
+    font-size: 1.8rem;
+  }
 }
 
 /* iPhone 5 or before */
 @media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
