@@ -1,6 +1,6 @@
 {
-  "short_name": "DALL-E Playground",
-  "name": "DALL-E Playground",
+  "short_name": "IMEC AI Demo",
+  "name": "IMEC AI Demo",
   "icons": [],
   "start_url": ".",
   "display": "standalone",
