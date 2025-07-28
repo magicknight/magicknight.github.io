@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScanLine 智影 - AI赋能极速在线CT检测</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/81057401-d703-4905-a864-1502d99d3007');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
+        }
+
+        .section-subtitle {
+            @apply text-lg md:text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto;
+        }
+
+        .table-cell {
+            @apply px-6 py-4;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-800">ScanLine 智影</a>
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-blue-600 transition">首页</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">关于我们</a>
+                <a href="#solutions" class="text-gray-600 hover:text-blue-600 transition">解决方案</a>
+                <a href="#technology" class="text-gray-600 hover:text-blue-600 transition">核心技术</a>
+                <a href="#news" class="text-gray-600 hover:text-blue-600 transition">新闻中心</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">联系我们</a>
+                <div class="border-l border-gray-300 h-6"></div>
+                <a href="index.html" class="text-blue-600 hover:text-blue-800 transition font-semibold">English</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#home" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">首页</a>
+            <a href="#about" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">关于我们</a>
+            <a href="#solutions" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">解决方案</a>
+            <a href="#technology" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">核心技术</a>
+            <a href="#news" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">新闻中心</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">联系我们</a>
+            <a href="index.html" class="block px-6 py-3 text-blue-600 font-semibold hover:bg-gray-100">English</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white min-h-screen flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">AI赋能极速在线CT检测</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">引领工业质检新范式</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+                <div
+                    class="bg-white/20 backdrop-blur-sm p-6 rounded-lg transition duration-300 hover:bg-white/30 hover:scale-105">
+                    <h3 class="text-2xl font-bold">2-5秒/件 极速扫描</h3>
+                    <p>完美匹配生产节拍的革命性速度</p>
+                </div>
+                <div
+                    class="bg-white/20 backdrop-blur-sm p-6 rounded-lg transition duration-300 hover:bg-white/30 hover:scale-105">
+                    <h3 class="text-2xl font-bold">100% 在线全检</h3>
+                    <p>对每一个产品进行全面无损检测，杜绝缺陷</p>
+                </div>
+                <div
+                    class="bg-white/20 backdrop-blur-sm p-6 rounded-lg transition duration-300 hover:bg-white/30 hover:scale-105">
+                    <h3 class="text-2xl font-bold">AI 深度赋能</h3>
+                    <p>自动化、高精度、不知疲倦的缺陷检测</p>
+                </div>
+            </div>
+            <a href="#contact"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">申请产品演示</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">关于我们</h2>
+            <p class="section-subtitle">我们的使命是通过前沿的AI和CT技术彻底改变工业质量检测，赋能制造商实现“零缺陷”生产。</p>
+
+            <div class="mb-16 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">核心团队</h3>
+                <p class="text-gray-600 max-w-4xl mx-auto">我们的团队由世界顶级的专家领导，将物理学和人工智能领域的深厚科学知识与将工业技术从概念推向市场的丰富实践经验相结合。
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div
+                    class="bg-gray-50 p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/3f191754-080c-43d8-886f-200922851d7c"
+                        alt="梁植华博士" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold">梁植华 博士</h3>
+                    <p class="text-blue-600 font-semibold mb-2">创始人 | 技术引领与实践专家</p>
+                    <p class="text-gray-600 text-sm">
+                        清华大学物理学学士，美国南方卫理公会大学物理学博士。X射线CT成像科学与AI/ML应用专家。作为欧洲初创公司ΔRAY的核心创始人与技术负责人，他领导了ΔRAY
+                        X100在线CT原型机的开发，成功将AI技术应用于工业CT并实现产品化。</p>
+                </div>
+                <div
+                    class="bg-gray-50 p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/52c67d1d-8703-4481-9b0d-52824707077a"
+                        alt="刘娟博士" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold">刘娟 博士</h3>
+                    <p class="text-blue-600 font-semibold mb-2">核心团队成员 | AI医学影像专家</p>
+                    <p class="text-gray-600 text-sm">马凯特大学生物医学工程博士，耶鲁大学博士后。在AI驱动的医学影像重建与分析领域拥有深厚经验，拥有Neuro42
+                        Inc.工作经验并是核心专利发明人。她的专业知识为我们的算法优化和未来市场拓展提供战略洞察。</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">扎根杭州：绝佳的产业生态</h3>
+                <p class="text-gray-600 max-w-4xl mx-auto">
+                    我们选择杭州，因为它拥有无与伦比的工业生态系统，能够接触到顶尖大学的丰富人才库，并精准聚焦于物联网和新能源汽车等行业——我们的核心客户就在这里。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions/Products Section -->
+    <section id="solutions" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">解决方案与产品</h2>
+            <p class="section-subtitle">从硬件系统到强大的SaaS平台，我们提供端到端的解决方案，以应对质量控制中最紧迫的挑战。</p>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- SCANLINE S-200i System -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/735c0268-3561-460d-9b59-26806716035f"
+                        alt="SCANLINE S-200i 在线CT系统" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">SCANLINE S-200i 在线CT系统</h3>
+                        <p class="text-gray-600 mb-4">
+                            专为无缝集成到生产线而设计的紧凑、模块化在线CT系统。它提供高速、高精度的检测，目标空间分辨率优于50µm，由我们核心的AI驱动重建算法提供支持。</p>
+                    </div>
+                </div>
+                <!-- ScanLine AI Platform -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/83ab0e0b-d2c6-4354-944d-5272a722650f"
+                        alt="ScanLine AI 平台" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">ScanLine AI 平台 (SaaS)</h3>
+                        <p class="text-gray-600 mb-4">
+                            一个强大的AI平台（云端或本地部署），提供从稀疏数据高质量三维重建、自动缺陷识别（ADR）和三维计量学等模块。标准化的API确保与MES/QMS系统无缝集成。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Target Industries -->
+            <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">目标行业</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/42562470-3850-424a-8998-0c65d642436f"
+                        alt="动力电池" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h4 class="text-xl font-semibold">动力电池</h4>
+                    <p class="text-gray-600">电芯焊接、极片对齐和内部缺陷的检测。</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/735c0268-3561-460d-9b59-26806716035f"
+                        alt="汽车精密零部件" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h4 class="text-xl font-semibold">汽车精密零部件</h4>
+                    <p class="text-gray-600">检测压铸件中的气孔、疏松和裂纹。</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/c28f09d8-07a8-4228-8687-f8c352528751"
+                        alt="高端电子制造" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h4 class="text-xl font-semibold">高端电子制造</h4>
+                    <p class="text-gray-600">IC封装、SMT焊点和连接器的质量控制。</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/a59051d9-e31c-4399-90d5-095568117075"
+                        alt="高端医疗器械" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h4 class="text-xl font-semibold">高端医疗器械</h4>
+                    <p class="text-gray-600">确保复杂医疗组件的完整性和精度。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">我们的技术</h2>
+            <p class="section-subtitle">我们的优势在于成像物理与先进AI的深度融合，并建立在自主可控的专有算法基础之上。</p>
+
+            <!-- Comparison Table -->
+            <div class="overflow-x-auto">
+                <table class="w-full min-w-max bg-white shadow-md rounded-lg mb-16">
+                    <thead class="bg-gray-800 text-white">
+                        <tr>
+                            <th class="table-cell text-left">特性</th>
+                            <th class="table-cell text-center bg-blue-600">ScanLine 智影</th>
+                            <th class="table-cell text-center">传统离线CT</th>
+                            <th class="table-cell text-center">传统2D X射线/超声波</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b">
+                            <td class="table-cell font-semibold">扫描速度</td>
+                            <td class="table-cell text-center font-bold text-blue-600">2-5秒/件</td>
+                            <td class="table-cell text-center">> 60秒/件</td>
+                            <td class="table-cell text-center">
+                                < 5秒/件</td>
+                        </tr>
+                        <tr class="border-b bg-gray-50">
+                            <td class="table-cell font-semibold">缺陷检测能力</td>
+                            <td class="table-cell text-center font-bold text-blue-600">AI增强，高精度</td>
+                            <td class="table-cell text-center">高 (依赖人工)</td>
+                            <td class="table-cell text-center">低/中</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="table-cell font-semibold">自动化水平</td>
+                            <td class="table-cell text-center font-bold text-blue-600">AI驱动全流程自动化</td>
+                            <td class="table-cell text-center">手动/半自动</td>
+                            <td class="table-cell text-center">有限</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="table-cell font-semibold">数据价值</td>
+                            <td class="table-cell text-center font-bold text-blue-600">丰富的工艺优化分析</td>
+                            <td class="table-cell text-center">有限的数字化数据</td>
+                            <td class="table-cell text-center">基础合格/不合格判断</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">智能稀疏3D重建</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        这是我们的核心创新。传统CT速度慢，因为它需要大量的投影数据。我们的稀疏重建技术就像一个熟练的侦探，从最少的线索中拼凑出完整的画面。它使用先进的AI从远少于传统方法的数据中“脑补”出完整、精确的三维结构，从而实现革命性的2-5秒扫描时间。
+                    </p>
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/233e5512-42c2-482d-8874-9a0d8e874452"
+                        alt="智能稀疏3D重建" class="rounded-lg shadow-xl w-full h-96 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Resources Section -->
+    <section id="news" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-title">新闻与资源</h2>
+            <p class="section-subtitle">关注我们的最新动态、行业洞察和技术发布。</p>
+            <p class="text-gray-700 text-xl">敬请期待...</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">携手 ScanLine 智影</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto text-center">
+                让我们共同开创AI工业在线CT检测的新纪元。我们智绘工业之眼，扫描全球市场。欢迎联系我们，探讨合作机会。</p>
+
+            <div class="max-w-2xl mx-auto bg-white text-gray-800 rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-6 text-center">联系我们</h3>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="f8a4d251-e5b0-42d9-810a-eba49d7335d9">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">姓名</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">邮箱</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">您的留言</label>
+                        <textarea id="message" name="message" rows="5"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">发送信息</button>
+                    </div>
+                </form>
+            </div>
+            <div class="mt-16 text-center text-gray-400">
+                <h4 class="text-xl font-bold mb-4">联系方式</h4>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="text-lg">
+                        <span class="font-bold">电话:</span> +86 172 0598 5812
+                    </div>
+                    <div class="text-lg">
+                        <span class="font-bold">网址:</span> <a href="http://www.scanline.cn" target="_blank"
+                            class="text-blue-400 hover:underline">http://www.scanline.cn</a> (建设中)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 ScanLine 智影. 版权所有.</p>
+            <p class="text-sm mt-2">扎根杭州，服务全球智能制造</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a, header nav a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
