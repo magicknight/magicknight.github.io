@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScanLine - AI-Powered High-Speed Online CT Inspection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/81057401-d703-4905-a864-1502d99d3007');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg md:text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto;
+        }
+        .table-cell {
+            @apply px-6 py-4;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-800">ScanLine</a>
+            <div class="hidden md:flex space-x-6 lg:space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About Us</a>
+                <a href="#solutions" class="text-gray-600 hover:text-blue-600 transition">Solutions</a>
+                <a href="#technology" class="text-gray-600 hover:text-blue-600 transition">Technology</a>
+                <a href="#news" class="text-gray-600 hover:text-blue-600 transition">News</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact Us</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#home" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">About Us</a>
+            <a href="#solutions" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Solutions</a>
+            <a href="#technology" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Technology</a>
+            <a href="#news" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">News</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white min-h-screen flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">AI-Powered High-Speed Online CT Inspection</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">Leading a New Paradigm in Industrial Quality Control</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+                <div class="bg-white/20 backdrop-blur-sm p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold">2-5 Second Scans</h3>
+                    <p>Revolutionary speed that matches your production line.</p>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold">100% Online Inspection</h3>
+                    <p>Eliminate defects by inspecting every single product.</p>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold">Deep AI Empowerment</h3>
+                    <p>Automated, precise, and tireless defect detection.</p>
+                </div>
+            </div>
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">Request a Demo</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">Our mission is to revolutionize industrial quality control through cutting-edge AI and CT technology, empowering manufacturers to achieve zero-defect production.</p>
+            
+            <div class="mb-16 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Core Team</h3>
+                <p class="text-gray-600 max-w-4xl mx-auto">Led by world-class experts, our team combines deep scientific knowledge in physics and AI with proven experience in bringing industrial technology from concept to market.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/3f191754-080c-43d8-886f-200922851d7c" alt="Dr. Zhihua Liang" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold">Dr. Zhihua Liang</h3>
+                    <p class="text-blue-600 font-semibold mb-2">Founder | Technical Lead & Practice Expert</p>
+                    <p class="text-gray-600 text-sm">Ph.D. in Physics from SMU, B.S. from Tsinghua University. Expert in X-ray CT imaging science and AI/ML applications. As a core founder and technical lead at European startup ΔRAY, he spearheaded the development of the ΔRAY X100 online CT prototype, successfully productizing AI for industrial CT.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/52c67d1d-8703-4481-9b0d-52824707077a" alt="Dr. Juan Liu" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold">Dr. Juan Liu</h3>
+                    <p class="text-blue-600 font-semibold mb-2">Core Team Member | AI Medical Imaging Expert</p>
+                    <p class="text-gray-600 text-sm">Ph.D. in Biomedical Engineering from Marquette University, Postdoctoral fellow at Yale. Deep expertise in AI-driven medical image reconstruction and analysis, with experience at Neuro42 Inc. and as a core patent inventor. Her expertise provides strategic insight for our algorithm optimization and future market expansion.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Rooted in Hangzhou: The Perfect Ecosystem</h3>
+                 <p class="text-gray-600 max-w-4xl mx-auto">We chose Hangzhou for its unparalleled industrial ecosystem, access to a rich talent pool from top universities, and a precise focus on industries like IoT and new energy vehicles—our key customers are right here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions/Products Section -->
+    <section id="solutions" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Solutions & Products</h2>
+            <p class="section-subtitle">From hardware systems to a powerful SaaS platform, we offer end-to-end solutions to solve the most pressing challenges in quality control.</p>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- SCANLINE 100 System -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/735c0268-3561-460d-9b59-26806716035f" alt="SCANLINE 100 Online CT System" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">SCANLINE 100 Online CT System</h3>
+                        <p class="text-gray-600 mb-4">A compact, modular online CT system designed for seamless integration into production lines. It delivers high-speed, high-precision inspection with a target spatial resolution better than 50µm, supported by our core AI-driven reconstruction algorithms.</p>
+                    </div>
+                </div>
+                <!-- ScanLine AI Platform -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/83ab0e0b-d2c6-4354-944d-5272a722650f" alt="ScanLine AI Platform" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">ScanLine AI Platform (SaaS)</h3>
+                        <p class="text-gray-600 mb-4">A powerful AI platform (cloud or on-premise) featuring modules for high-quality 3D reconstruction from sparse data, Automated Defect Recognition (ADR), and 3D Metrology. Standardized APIs ensure seamless integration with MES/QMS systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Target Industries -->
+            <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Target Industries</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/42562470-3850-424a-8998-0c65d642436f" alt="Power Battery" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h4 class="text-xl font-semibold">Power Batteries</h4>
+                    <p class="text-gray-600">Inspection of welds, electrode alignment, and internal defects.</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/735c0268-3561-460d-9b59-26806716035f" alt="Automotive Parts" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h4 class="text-xl font-semibold">Automotive Parts</h4>
+                    <p class="text-gray-600">Detecting porosity, shrinkage, and cracks in die-cast components.</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/c28f09d8-07a8-4228-8687-f8c352528751" alt="Electronics Manufacturing" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                    <h4 class="text-xl font-semibold">High-End Electronics</h4>
+                    <p class="text-gray-600">Quality control for IC packaging, SMT solder joints, and connectors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Our Technology</h2>
+            <p class="section-subtitle">Our advantage lies in the deep integration of imaging physics and advanced AI, built on a foundation of sovereign, proprietary algorithms.</p>
+            
+            <!-- Comparison Table -->
+            <div class="overflow-x-auto">
+                <table class="w-full min-w-max bg-white shadow-md rounded-lg mb-16">
+                    <thead class="bg-gray-800 text-white">
+                        <tr>
+                            <th class="table-cell text-left">Feature</th>
+                            <th class="table-cell text-center bg-blue-600">ScanLine</th>
+                            <th class="table-cell text-center">Offline CT</th>
+                            <th class="table-cell text-center">2D X-ray / Ultrasound</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b">
+                            <td class="table-cell font-semibold">Scan Speed</td>
+                            <td class="table-cell text-center font-bold text-blue-600">2-5 sec/part</td>
+                            <td class="table-cell text-center">> 60 sec/part</td>
+                            <td class="table-cell text-center">< 5 sec/part</td>
+                        </tr>
+                        <tr class="border-b bg-gray-50">
+                            <td class="table-cell font-semibold">Defect Detection</td>
+                            <td class="table-cell text-center font-bold text-blue-600">AI-enhanced, high precision</td>
+                            <td class="table-cell text-center">High (manual)</td>
+                            <td class="table-cell text-center">Low / Medium</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="table-cell font-semibold">Automation Level</td>
+                            <td class="table-cell text-center font-bold text-blue-600">Fully automated (AI-driven)</td>
+                            <td class="table-cell text-center">Manual / Semi-auto</td>
+                            <td class="table-cell text-center">Limited</td>
+                        </tr>
+                         <tr class="bg-gray-50">
+                            <td class="table-cell font-semibold">Data Value</td>
+                            <td class="table-cell text-center font-bold text-blue-600">Rich analytics for process optimization</td>
+                            <td class="table-cell text-center">Limited digital data</td>
+                            <td class="table-cell text-center">Basic pass/fail</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Intelligent Sparse 3D Reconstruction</h3>
+                    <p class="text-gray-600 leading-relaxed">This is our core innovation. Traditional CT is slow because it needs vast amounts of projection data. Our sparse reconstruction technology acts like a skilled detective, piecing together the full picture from minimal clues. It uses advanced AI to "in-fill" a complete, precise 3D structure from far less data, achieving a revolutionary 2-5 second scan time.</p>
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903921508-public/images/233e5512-42c2-482d-8874-9a0d8e874452" alt="Intelligent Sparse 3D Reconstruction" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Resources Section -->
+    <section id="news" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-title">News & Resources</h2>
+            <p class="section-subtitle">Stay updated with our latest developments, industry insights, and publications.</p>
+            <p class="text-gray-700 text-xl">Coming Soon...</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Partner with ScanLine</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Let's pioneer a new era of AI industrial online CT inspection together. Based in Hangzhou, we are designing the industrial eye to scan the global market. Contact us to explore collaboration opportunities.</p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                <div class="text-lg">
+                    <span class="font-bold">Phone:</span> +86 172 0598 5812
+                </div>
+                <div class="text-lg">
+                    <span class="font-bold">Website:</span> <a href="http://www.scanline.cn" target="_blank" class="text-blue-400 hover:underline">http://www.scanline.cn</a> (Under Construction)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 ScanLine. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Rooted in Hangzhou, Serving Global Smart Manufacturing</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a, header nav a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
