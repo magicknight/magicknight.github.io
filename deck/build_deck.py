@@ -340,7 +340,7 @@ def slide_cover(prs):
     add_line(slide, 0.68, 5.25, 7.35, 5.25, RGBColor(48, 81, 103), 1)
     add_text(
         slide,
-        "Zhihua Liang  ·  Founder",
+        "Zhihua Liang  ·  Co-founder",
         0.69,
         5.55,
         3.8,
@@ -616,7 +616,7 @@ def slide_proof(prs):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_bg(slide, PAPER)
     add_brand(slide)
-    add_kicker(slide, "Founder proof, clean product boundary")
+    add_kicker(slide, "Co-founder proof, clean product boundary")
     add_title(
         slide,
         "We know what it takes to move CT from the lab to the line.",
@@ -638,7 +638,7 @@ def slide_proof(prs):
     )
     add_text(
         slide,
-        "Founder’s prior work · not a ScanLine product",
+        "Zhihua’s prior work · not a ScanLine product",
         1.04,
         5.87,
         4.2,
@@ -685,7 +685,7 @@ def slide_proof(prs):
     add_footer(
         slide,
         5,
-        note="Boundary note: prior DeltaRAY work demonstrates founder capability; no DeltaRAY product, customer, or IP is claimed by ScanLine.",
+        note="Boundary note: Zhihua’s prior DeltaRAY work demonstrates co-founder capability; no DeltaRAY product, customer, or IP is claimed by ScanLine.",
     )
     return slide
 
@@ -1131,7 +1131,7 @@ def slide_team(prs):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_bg(slide, WHITE)
     add_brand(slide)
-    add_kicker(slide, "Two-person core team")
+    add_kicker(slide, "China-based two-person founding team")
     add_title(
         slide,
         "CT systems experience meets medical imaging AI.",
@@ -1141,7 +1141,7 @@ def slide_team(prs):
         (
             "ZL",
             "Zhihua Liang",
-            "Founder · CT Systems & AI",
+            "Co-founder · CT Systems & AI",
             "Previously led AI back-end, reconstruction, and system integration for the DeltaRAY X100 inline CT platform.",
             "Inline CT · reconstruction · system integration",
             BLUE,
@@ -1149,7 +1149,7 @@ def slide_team(prs):
         (
             "JL",
             "Dr. Juan Liu",
-            "Core Team · AI Medical Imaging",
+            "Co-founder · AI Medical Imaging",
             "PhD researcher contributing image analysis, model development, experimental design, and medical imaging perspective.",
             "Medical imaging · computer vision · experiments",
             TEAL,
@@ -1189,7 +1189,7 @@ def slide_team(prs):
         )
     add_text(
         slide,
-        "Current operating model: founders/core team first, specialist partners added around the selected pilot.",
+        "Current operating model: two co-founders first, specialist partners added around the selected pilot.",
         2.21,
         6.55,
         8.9,

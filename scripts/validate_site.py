@@ -82,8 +82,14 @@ def validate():
         "One part. One defect. One line.",
         "Independent alternative",
         "Dr. Juan Liu",
+        "Co-founder · AI Medical Imaging",
     ]
-    required_chinese = ["开放桥梁", "一个工件，一个缺陷，一条产线。", "刘娟 博士"]
+    required_chinese = [
+        "开放桥梁",
+        "一个工件，一个缺陷，一条产线。",
+        "刘娟 博士",
+        "联合创始人 · AI 医学影像",
+    ]
     for phrase in required_english:
         require(phrase in english, f"index.html: missing required phrase: {phrase}", errors)
     for phrase in required_chinese:
