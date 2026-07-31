@@ -1,341 +1,570 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScanLine 智影｜AI 原生在线 CT 检测</title>
+    <meta
+      name="description"
+      content="ScanLine 智影正在构建物理约束 AI 与在线 CT 系统，让制造现场获得快速、可信、可追溯的三维质量决策。"
+    />
+    <meta name="theme-color" content="#071a2b" />
+    <link rel="canonical" href="https://scanline.cn/index_zh.html" />
+    <link rel="alternate" hreflang="en" href="https://scanline.cn/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://scanline.cn/index_zh.html" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ScanLine 智影｜AI 原生在线 CT 检测" />
+    <meta property="og:description" content="看见每一个工件，在它离开产线之前做出决策。" />
+    <meta property="og:url" content="https://scanline.cn/index_zh.html" />
+    <meta property="og:image" content="https://scanline.cn/pic/scan200i.jpg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScanLine 智影 - AI赋能极速在线CT检测</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Noto Sans SC', 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('pic/bg.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .section-title {
-            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
-        }
-
-        .section-subtitle {
-            @apply text-lg md:text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto;
-        }
-
-        .table-cell {
-            @apply px-6 py-4;
-        }
-    </style>
-</head>
-
-<body class="bg-gray-50">
-
-    <!-- Navigation -->
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-gray-800">ScanLine 智影</a>
-            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                <a href="#home" class="text-gray-600 hover:text-blue-600 transition">首页</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">关于我们</a>
-                <a href="#solutions" class="text-gray-600 hover:text-blue-600 transition">解决方案</a>
-                <a href="#technology" class="text-gray-600 hover:text-blue-600 transition">核心技术</a>
-                <a href="#news" class="text-gray-600 hover:text-blue-600 transition">新闻中心</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">联系我们</a>
-                <div class="border-l border-gray-300 h-6"></div>
-                <a href="index.html" class="text-blue-600 hover:text-blue-800 transition font-semibold">English</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
-                </svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#home" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">首页</a>
-            <a href="#about" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">关于我们</a>
-            <a href="#solutions" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">解决方案</a>
-            <a href="#technology" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">核心技术</a>
-            <a href="#news" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">新闻中心</a>
-            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">联系我们</a>
-            <a href="index.html" class="block px-6 py-3 text-blue-600 font-semibold hover:bg-gray-100">English</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="主导航">
+        <a class="brand" href="/index_zh.html" aria-label="ScanLine 智影首页">
+          <img class="brand-mark" src="/favicon.svg" alt="" />
+          <span>ScanLine 智影</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-label="打开导航"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#solution">方案</a>
+          <a href="#evidence">证据</a>
+          <a href="#pilot">试点</a>
+          <a href="#team">团队</a>
+          <a href="/" lang="en">EN</a>
+          <a class="nav-cta" href="#contact">洽谈联合试点</a>
         </div>
+      </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg text-white min-h-screen flex items-center">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">AI赋能极速在线CT检测</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">引领工业质检新范式</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-                <div
-                    class="bg-white/20 backdrop-blur-sm p-6 rounded-lg transition duration-300 hover:bg-white/30 hover:scale-105">
-                    <h3 class="text-2xl font-bold">2-5秒/件 极速扫描</h3>
-                    <p>完美匹配生产节拍的革命性速度</p>
-                </div>
-                <div
-                    class="bg-white/20 backdrop-blur-sm p-6 rounded-lg transition duration-300 hover:bg-white/30 hover:scale-105">
-                    <h3 class="text-2xl font-bold">100% 在线全检</h3>
-                    <p>对每一个产品进行全面无损检测，杜绝缺陷</p>
-                </div>
-                <div
-                    class="bg-white/20 backdrop-blur-sm p-6 rounded-lg transition duration-300 hover:bg-white/30 hover:scale-105">
-                    <h3 class="text-2xl font-bold">AI 深度赋能</h3>
-                    <p>自动化、高精度、不知疲倦的缺陷检测</p>
-                </div>
+    <main id="main">
+      <section class="hero">
+        <div class="hero-grid container">
+          <div>
+            <div class="eyebrow">AI 原生在线 CT 检测</div>
+            <h1>看见每一个工件，在它离开产线之前做出决策。</h1>
+            <p class="hero-lead">
+              ScanLine 智影正在构建物理约束 AI 与 X 射线 CT 系统，
+              面向快速、可信的三维质量决策，让检测从离线抽检进入产线闭环。
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="/deck/ScanLine_AI_Gemini_Startup_Forum_2026.pdf"
+                >查看英文路演材料 ↗</a
+              >
+              <a class="button button-secondary" href="#pilot">了解 90 天试点</a>
             </div>
-            <a href="#contact"
-                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">申请产品演示</a>
+            <div class="micro-proof">
+              <span>物理约束重建</span>
+              <span>不确定性决策</span>
+              <span>边缘与云协同路径</span>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="在线 CT 概念示意图">
+            <div class="hero-image">
+              <img src="/pic/scan200i.jpg" alt="紧凑型在线 CT 设备概念示意图" />
+              <span class="concept-label">概念示意图</span>
+            </div>
+            <div class="signal-card signal-a">
+              <strong>稀疏采集</strong>
+              <span>只测量质量决策真正需要的信息</span>
+            </div>
+            <div class="signal-card signal-b">
+              <strong>2–5 秒目标</strong>
+              <span>针对明确工件与缺陷类别</span>
+            </div>
+            <div class="signal-card signal-c">
+              <strong>置信度不足？</strong>
+              <span>复扫或转交人工复核</span>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title">关于我们</h2>
-            <p class="section-subtitle">我们的使命是通过前沿的AI和CT技术彻底改变工业质量检测，赋能制造商实现“零缺陷”生产。</p>
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">检测缺口</div>
+              <h2>制造现场仍在深度与速度之间做取舍。</h2>
+            </div>
+            <p>
+              真正昂贵的缺陷往往藏在工件内部并具有三维结构，
+              但能够看见它们的工具通常太慢，或离生产决策太远。
+            </p>
+          </div>
+          <div class="problem-grid">
+            <article class="card reveal">
+              <span class="card-number">01</span>
+              <h3>人工或破坏性检测</h3>
+              <p>反馈慢、依赖操作员、只能抽样，绝大多数产品没有被真正看见。</p>
+            </article>
+            <article class="card reveal">
+              <span class="card-number">02</span>
+              <h3>离线工业 CT</h3>
+              <p>三维证据充分，但采集、重建和判读若慢于节拍，就来不及改变生产。</p>
+            </article>
+            <article class="card reveal">
+              <span class="card-number">03</span>
+              <h3>高速二维检测</h3>
+              <p>吞吐量高，却可能受遮挡与深度混叠影响，难以准确定位内部缺陷。</p>
+            </article>
+          </div>
+          <div class="thesis reveal">
+            我们的核心判断：把采集、重建与质量决策协同设计，
+            围绕“必须抓住的缺陷”优化整个闭环。
+          </div>
+        </div>
+      </section>
 
-            <div class="mb-16 text-center">
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">核心团队</h3>
-                <p class="text-gray-600 max-w-4xl mx-auto">我们的团队由世界顶级的专家领导，将物理学和人工智能领域的深厚科学知识与将工业技术从概念推向市场的丰富实践经验相结合。
+      <section class="section section-dark" id="solution">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">ScanLine 闭环</div>
+              <h2>从 X 射线投影到可审计的产线动作。</h2>
+            </div>
+            <p>
+              AI 不是附加功能。它把稀疏测量、物理一致性、缺陷证据、
+              不确定性和工厂反馈连接成一个决策系统。
+            </p>
+          </div>
+          <div class="workflow">
+            <article class="workflow-step reveal">
+              <small>01</small>
+              <h3>工件与缺陷真值</h3>
+              <p>先冻结判定任务、最小缺陷和两类错误的成本。</p>
+            </article>
+            <article class="workflow-step reveal">
+              <small>02</small>
+              <h3>稀疏采集</h3>
+              <p>围绕目标决策选择几何与投影，而不是盲目采满数据。</p>
+            </article>
+            <article class="workflow-step reveal">
+              <small>03</small>
+              <h3>物理约束 AI</h3>
+              <p>在重建或直接推断中保持与投影测量一致。</p>
+            </article>
+            <article class="workflow-step reveal">
+              <small>04</small>
+              <h3>缺陷决策</h3>
+              <p>输出定位、置信度与可追溯的合格/不合格依据。</p>
+            </article>
+            <article class="workflow-step reveal">
+              <small>05</small>
+              <h3>工厂反馈</h3>
+              <p>复扫、复核，并把证据送入 MES/QMS 和工艺控制。</p>
+            </article>
+          </div>
+          <div class="acceptance reveal" aria-label="试点验收指标">
+            <span>周期时间</span>
+            <span>最小可检缺陷</span>
+            <span>召回率</span>
+            <span>误报率</span>
+            <span>剂量</span>
+            <span>不确定性校准</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="evidence">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">把既有证据与未来目标分开</div>
+              <h2>由真正把在线 CT 带到产线的人再次出发。</h2>
+            </div>
+            <p>
+              创始人的既往系统经验已经建立；ScanLine 的新产品、代码、
+              数据集与知识产权路线正在独立建设。生产节拍性能仍是待验证的里程碑，
+              不是已经实现的结果。
+            </p>
+          </div>
+          <div class="proof-grid">
+            <figure class="proof-media reveal">
+              <img src="/pic/deltaray-line-demo.png" alt="既往 DeltaRAY 在线 CT 产线部署" />
+              <figcaption class="proof-caption">
+                创始人既往工作：参与 DeltaRAY X100 的在线部署与系统集成。
+                图片中的产品及相关知识产权属于 DeltaRAY，不属于 ScanLine。
+              </figcaption>
+            </figure>
+            <div class="state-stack">
+              <article class="state reveal">
+                <span class="state-tag state-established">已建立</span>
+                <h3>在线 CT 端到端经验</h3>
+                <p>
+                  梁志华曾负责在线 CT 平台的 AI 后端、重建与系统集成，
+                  包括产线侧部署。
                 </p>
+              </article>
+              <article class="state reveal">
+                <span class="state-tag state-progress">建设中</span>
+                <h3>独立的 ScanLine 技术栈</h3>
+                <p>
+                  正在开发新的采集设计、重建与决策软件、数据契约和清晰的知识产权路线。
+                </p>
+              </article>
+              <article class="state reveal">
+                <span class="state-tag state-open">开放桥梁</span>
+                <h3>生产节拍验收</h3>
+                <p>
+                  2–5 秒周期目标与缺陷灵敏度，需要在明确的工件、缺陷和产线上联合验证。
+                </p>
+              </article>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 mb-16">
-                <div
-                    class="bg-gray-50 p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-                    <img src="pic/zhihua.jpg" alt="梁植华博士" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                    <h3 class="text-xl font-bold">梁植华 博士</h3>
-                    <p class="text-blue-600 font-semibold mb-2">创始人 | 技术引领与实践专家</p>
-                    <p class="text-gray-600 text-sm">
-                        清华大学物理学学士，美国南方卫理公会大学物理学博士。X射线CT成像科学与AI/ML应用专家。作为欧洲初创公司ΔRAY的核心创始人与技术负责人，他领导了ΔRAY
-                        X100在线CT原型机的开发，成功将AI技术应用于工业CT并实现产品化。</p>
-                </div>
-                <div
-                    class="bg-gray-50 p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-                    <img src="pic/juan.png" alt="刘娟博士" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                    <h3 class="text-xl font-bold">刘娟 博士</h3>
-                    <p class="text-blue-600 font-semibold mb-2">核心团队成员 | AI医学影像专家</p>
-                    <p class="text-gray-600 text-sm">马凯特大学生物医学工程博士，耶鲁大学博士后。在AI驱动的医学影像重建与分析领域拥有深厚经验，拥有Neuro42
-                        Inc.工作经验并是核心专利发明人。她的专业知识为我们的算法优化和未来市场拓展提供战略洞察。</p>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">扎根杭州：绝佳的产业生态</h3>
-                <p class="text-gray-600 max-w-4xl mx-auto">
-                    我们选择杭州，因为它拥有无与伦比的工业生态系统，能够接触到顶尖大学的丰富人才库，并精准聚焦于物联网和新能源汽车等行业——我们的核心客户就在这里。</p>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Solutions/Products Section -->
-    <section id="solutions" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title">解决方案与产品</h2>
-            <p class="section-subtitle">从硬件系统到强大的SaaS平台，我们提供端到端的解决方案，以应对质量控制中最紧迫的挑战。</p>
-
-            <div class="grid md:grid-cols-2 gap-12 mb-16">
-                <!-- SCANLINE S-200i System -->
-                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
-                    <img src="pic/scan200i.jpg" alt="SCANLINE S-200i 在线CT系统" class="w-full h-64 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-3">SCANLINE S-200i 在线CT系统</h3>
-                        <p class="text-gray-600 mb-4">
-                            专为无缝集成到生产线而设计的紧凑、模块化在线CT系统。它提供高速、高精度的检测，目标空间分辨率优于50µm，由我们核心的AI驱动重建算法提供支持。</p>
-                    </div>
-                </div>
-                <!-- ScanLine AI Platform -->
-                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
-                    <img src="pic/saas.jpg" alt="ScanLine AI 平台" class="w-full h-64 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-3">ScanLine AI 平台 (SaaS)</h3>
-                        <p class="text-gray-600 mb-4">
-                            一个强大的AI平台（云端或本地部署），提供从稀疏数据高质量三维重建、自动缺陷识别（ADR）和三维计量学等模块。标准化的API确保与MES/QMS系统无缝集成。</p>
-                    </div>
-                </div>
+      <section class="section">
+        <div class="container">
+          <div class="trust-grid">
+            <figure class="trust-visual reveal">
+              <img src="/pic/sparse.jpg" alt="稀疏视角 CT 重建概念示意图" />
+              <figcaption class="form-note">概念示意图</figcaption>
+            </figure>
+            <div>
+              <div class="eyebrow">可信是系统属性</div>
+              <h2 class="section-title">质量决策不只需要一张清晰图像。</h2>
+              <div class="trust-list" style="margin-top: 30px">
+                <article class="trust-item reveal">
+                  <span class="trust-icon">物</span>
+                  <div><h3>投影一致性</h3><p>让 AI 输出接受原始测量和成像物理的反向检查。</p></div>
+                </article>
+                <article class="trust-item reveal">
+                  <span class="trust-icon">真</span>
+                  <div><h3>缺陷真值</h3><p>用计量、破坏性切片或合格参考方法建立验收真值。</p></div>
+                </article>
+                <article class="trust-item reveal">
+                  <span class="trust-icon">信</span>
+                  <div><h3>不确定性与漂移</h3><p>识别分布外工件，显式呈现低置信度决策。</p></div>
+                </article>
+                <article class="trust-item reveal">
+                  <span class="trust-icon">人</span>
+                  <div><h3>安全回退</h3><p>模糊样本进入复扫或专家复核，而不是隐藏不确定性。</p></div>
+                </article>
+              </div>
             </div>
-
-            <!-- Target Industries -->
-            <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">目标行业</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <img src="pic/battery.jpg" alt="动力电池" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
-                    <h4 class="text-xl font-semibold">动力电池</h4>
-                    <p class="text-gray-600">电芯焊接、极片对齐和内部缺陷的检测。</p>
-                </div>
-                <div class="text-center">
-                    <img src="pic/auto.jpg" alt="汽车精密零部件" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
-                    <h4 class="text-xl font-semibold">汽车精密零部件</h4>
-                    <p class="text-gray-600">检测压铸件中的气孔、疏松和裂纹。</p>
-                </div>
-                <div class="text-center">
-                    <img src="pic/chips.jpg" alt="高端电子制造" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
-                    <h4 class="text-xl font-semibold">高端电子制造</h4>
-                    <p class="text-gray-600">IC封装、SMT焊点和连接器的质量控制。</p>
-                </div>
-                <div class="text-center">
-                    <img src="pic/advance_medical_device.jpg" alt="高端医疗器械"
-                        class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
-                    <h4 class="text-xl font-semibold">高端医疗器械</h4>
-                    <p class="text-gray-600">确保复杂医疗组件的完整性和精度。</p>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Technology Section -->
-    <section id="technology" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title">我们的技术</h2>
-            <p class="section-subtitle">我们的优势在于成像物理与先进AI的深度融合，并建立在自主可控的专有算法基础之上。</p>
-
-            <!-- Comparison Table -->
-            <div class="overflow-x-auto">
-                <table class="w-full min-w-max bg-white shadow-md rounded-lg mb-16">
-                    <thead class="bg-gray-800 text-white">
-                        <tr>
-                            <th class="table-cell text-left">特性</th>
-                            <th class="table-cell text-center bg-blue-600">ScanLine 智影</th>
-                            <th class="table-cell text-center">传统离线CT</th>
-                            <th class="table-cell text-center">传统2D X射线/超声波</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-gray-700">
-                        <tr class="border-b">
-                            <td class="table-cell font-semibold">扫描速度</td>
-                            <td class="table-cell text-center font-bold text-blue-600">2-5秒/件</td>
-                            <td class="table-cell text-center">> 60秒/件</td>
-                            <td class="table-cell text-center">
-                                < 5秒/件</td>
-                        </tr>
-                        <tr class="border-b bg-gray-50">
-                            <td class="table-cell font-semibold">缺陷检测能力</td>
-                            <td class="table-cell text-center font-bold text-blue-600">AI增强，高精度</td>
-                            <td class="table-cell text-center">高 (依赖人工)</td>
-                            <td class="table-cell text-center">低/中</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="table-cell font-semibold">自动化水平</td>
-                            <td class="table-cell text-center font-bold text-blue-600">AI驱动全流程自动化</td>
-                            <td class="table-cell text-center">手动/半自动</td>
-                            <td class="table-cell text-center">有限</td>
-                        </tr>
-                        <tr class="bg-gray-50">
-                            <td class="table-cell font-semibold">数据价值</td>
-                            <td class="table-cell text-center font-bold text-blue-600">丰富的工艺优化分析</td>
-                            <td class="table-cell text-center">有限的数字化数据</td>
-                            <td class="table-cell text-center">基础合格/不合格判断</td>
-                        </tr>
-                    </tbody>
-                </table>
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">两条路线，一个智能层</div>
+              <h2>从整机协同出发，同时保持硬件兼容。</h2>
             </div>
+            <p>
+              最强路线是协同设计的检测系统；独立的软件路线可以升级兼容 CT，
+              避免每次落地都依赖一台全新设备。
+            </p>
+          </div>
+          <div class="route-grid">
+            <article class="route-card reveal">
+              <img src="/pic/scan200i.jpg" alt="一体化在线 CT 系统概念图" />
+              <div class="route-copy">
+                <span class="route-label">主路线</span>
+                <h3>一体化在线 CT 系统</h3>
+                <p>
+                  围绕一个真实生产问题，协同设计射线源、探测器、运动、
+                  稀疏采集、AI 重建和最终质量判定。
+                </p>
+              </div>
+            </article>
+            <article class="route-card reveal">
+              <img src="/pic/saas.jpg" alt="工业检测软件智能层概念图" />
+              <div class="route-copy">
+                <span class="route-label">独立替代路线</span>
+                <h3>兼容 CT 的 AI 软件</h3>
+                <p>
+                  把重建、缺陷决策、不确定性与工作流集成，
+                  作为兼容不同硬件的智能层交付。
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+      <section class="section section-dark" id="pilot">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">决定性的第一个楔子</div>
+              <h2>一个工件，一个缺陷，一条产线。</h2>
+            </div>
+            <p>
+              用足够窄的首个场景直接检验最难主张：在相同缺陷阈值下，
+              稀疏 CT 与物理约束 AI 能否比稠密基线更快。
+            </p>
+          </div>
+          <div class="wedge">
+            <div class="wedge-item reveal">
+              <b>1 个工件</b>
+              <span>几何稳定，且存在真实生产瓶颈</span>
+            </div>
+            <div class="wedge-item reveal">
+              <b>1 类缺陷</b>
+              <span>可测量、有合格真值的内部失效模式</span>
+            </div>
+            <div class="wedge-item reveal">
+              <b>1 条产线</b>
+              <span>节拍明确，并有负责工艺决策的人</span>
+            </div>
+          </div>
+          <div class="probe">
+            <article class="probe-step reveal">
+              <strong>第 0–30 天 · 冻结问题</strong>
+              <p>锁定工件、缺陷分类、真值方法、稠密基线和联合验收指标。</p>
+            </article>
+            <article class="probe-step reveal">
+              <strong>第 31–60 天 · 构建系统</strong>
+              <p>采集稀疏/稠密配对数据，训练物理约束流程，并校准不确定性。</p>
+            </article>
+            <article class="probe-step reveal">
+              <strong>第 61–90 天 · 做出判断</strong>
+              <p>进行盲测对比，然后选择落地、修复观测量，或停止这个场景。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">候选应用</div>
+              <h2>从隐藏缺陷代价最高的地方开始。</h2>
+            </div>
+            <p>
+              以下是目标应用类别，不代表现有客户或已经部署。
+              首个商业场景将由数据可得性、缺陷真值、节拍与经济价值共同决定。
+            </p>
+          </div>
+          <div class="application-grid">
+            <article class="application reveal">
+              <img src="/pic/battery.jpg" alt="电芯检测概念图" />
+              <div class="application-copy">
+                <h3>动力电池</h3>
+                <p>内部对齐、折叠、污染与结构异常。</p>
+              </div>
+            </article>
+            <article class="application reveal">
+              <img src="/pic/auto.jpg" alt="汽车铸件检测概念图" />
+              <div class="application-copy">
+                <h3>铸件与焊接</h3>
+                <p>气孔、裂纹、夹杂和内部连接缺陷。</p>
+              </div>
+            </article>
+            <article class="application reveal">
+              <img src="/pic/chips.jpg" alt="电子器件检测概念图" />
+              <div class="application-copy">
+                <h3>电子器件</h3>
+                <p>隐藏互连、封装与装配异常。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="team">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">两人核心团队</div>
+              <h2>CT 系统经验与医学影像 AI 汇合。</h2>
+            </div>
+            <p>
+              紧凑的技术团队覆盖在线 CT 架构、重建、计算机视觉与医学图像分析。
+            </p>
+          </div>
+          <div class="team-grid">
+            <article class="person reveal">
+              <div class="person-top">
+                <span class="person-avatar" aria-hidden="true">梁</span>
                 <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">智能稀疏3D重建</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        这是我们的核心创新。传统CT速度慢，因为它需要大量的投影数据。我们的稀疏重建技术就像一个熟练的侦探，从最少的线索中拼凑出完整的画面。它使用先进的AI从远少于传统方法的数据中“脑补”出完整、精确的三维结构，从而实现革命性的2-5秒扫描时间。
-                    </p>
+                  <h3>梁志华</h3>
+                  <p class="person-role">创始人 · CT 系统与 AI</p>
                 </div>
+              </div>
+              <p>
+                曾负责 DeltaRAY X100 在线 CT 平台的 AI 后端、重建与系统集成。
+                专注于把工业成像转化为真正进入生产流程的决策系统。
+              </p>
+              <a
+                class="person-link"
+                href="https://be.linkedin.com/in/liangzhihua"
+                rel="noopener"
+                target="_blank"
+                >LinkedIn ↗</a
+              >
+            </article>
+            <article class="person reveal">
+              <div class="person-top">
+                <span class="person-avatar" aria-hidden="true">刘</span>
                 <div>
-                    <img src="pic/sparse.jpg" alt="智能稀疏3D重建" class="rounded-lg shadow-xl w-full h-96 object-contain">
+                  <h3>刘娟 博士</h3>
+                  <p class="person-role">核心团队 · AI 医学影像</p>
                 </div>
+              </div>
+              <p>
+                AI 医学影像博士研究者，为 ScanLine 的技术路线贡献图像分析、
+                模型开发、实验设计与临床成像视角。
+              </p>
+            </article>
+          </div>
+          <div class="team-strip reveal">
+            <span>在线 CT 架构</span>
+            <span>图像重建</span>
+            <span>物理约束学习</span>
+            <span>医学图像分析</span>
+            <span>系统集成</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">执行路线图</div>
+              <h2>把开放桥梁变成可测量证据。</h2>
             </div>
+            <p>
+              当前优先级不是铺开产品目录，而是获得一个经得起验证的产线结果，
+              再把它变成可重复的系统。
+            </p>
+          </div>
+          <div class="roadmap">
+            <article class="roadmap-step reveal">
+              <strong>现在</strong>
+              <h3>架构与首个场景</h3>
+              <p>独立产品架构、试点定义，以及数据与知识产权契约。</p>
+            </article>
+            <article class="roadmap-step reveal">
+              <strong>90 天</strong>
+              <h3>决定性基准</h3>
+              <p>在一个工件和一种缺陷上完成稠密对稀疏盲测。</p>
+            </article>
+            <article class="roadmap-step reveal">
+              <strong>12 个月</strong>
+              <h3>产线侧原型</h3>
+              <p>在真实生产环境中测试一体化原型。</p>
+            </article>
+            <article class="roadmap-step reveal">
+              <strong>18 个月</strong>
+              <h3>可重复部署</h3>
+              <p>形成合格基准、可复用工作流和首批商业部署。</p>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- News & Resources Section -->
-    <section id="news" class="py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="section-title">新闻与资源</h2>
-            <p class="section-subtitle">关注我们的最新动态、行业洞察和技术发布。</p>
-            <p class="text-gray-700 text-xl">敬请期待...</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800 text-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">携手 ScanLine 智影</h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto text-center">
-                让我们共同开创AI工业在线CT检测的新纪元。我们智绘工业之眼，扫描全球市场。欢迎联系我们，探讨合作机会。</p>
-
-            <div class="max-w-2xl mx-auto bg-white text-gray-800 rounded-lg shadow-lg p-8">
-                <h3 class="text-2xl font-bold mb-6 text-center">联系我们</h3>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="f8a4d251-e5b0-42d9-810a-eba49d7335d9">
-                    <div class="mb-4">
-                        <label for="name" class="block text-gray-700 font-semibold mb-2">姓名</label>
-                        <input type="text" id="name" name="name"
-                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                            required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-gray-700 font-semibold mb-2">邮箱</label>
-                        <input type="email" id="email" name="email"
-                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                            required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 font-semibold mb-2">您的留言</label>
-                        <textarea id="message" name="message" rows="5"
-                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                            required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit"
-                            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">发送信息</button>
-                    </div>
-                </form>
+      <section class="section">
+        <div class="container">
+          <div class="collab reveal">
+            <div>
+              <div class="eyebrow">AI 与云路线</div>
+              <h2>构建会持续学习的检测系统，而不是孤立模型。</h2>
+              <p>
+                我们正在评估适合的 Google Cloud 与 Gemini 技术栈，
+                用于规模化三维训练、多模态制造知识，以及生产数据需要留在现场时的混合部署。
+              </p>
             </div>
-            <div class="mt-16 text-center text-gray-400">
-                <h4 class="text-xl font-bold mb-4">联系方式</h4>
-                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="text-lg">
-                        <span class="font-bold">电话:</span> +86 172 0598 5812
-                    </div>
-                    <div class="text-lg">
-                        <span class="font-bold">网址:</span> <a href="http://www.scanline.cn" target="_blank"
-                            class="text-blue-400 hover:underline">http://www.scanline.cn</a> (建设中)
-                    </div>
-                </div>
+            <div class="collab-list">
+              <div>
+                <b>多模态质量助手</b>
+                <span>连接体数据、投影、缺陷证据、工艺日志与工程知识。</span>
+              </div>
+              <div>
+                <b>规模化三维模型开发</b>
+                <span>评估 Vertex AI 与加速器，用于训练、评估和可复现模型治理。</span>
+              </div>
+              <div>
+                <b>边缘与云协同运行</b>
+                <span>实时推理留在产线附近，在获得许可后汇总证据实现系统学习。</span>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-6">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 ScanLine 智影. 版权所有.</p>
-            <p class="text-sm mt-2">扎根杭州，服务全球智能制造</p>
+      <section class="section contact" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <div class="eyebrow">共同构建第一个证据</div>
+            <h2>你是否有一种代价高昂的隐藏缺陷？</h2>
+            <p>
+              我们正在寻找愿意共同定义一个工件、一类缺陷、一种合格真值方法，
+              以及真实节拍约束的设计合作伙伴。
+            </p>
+            <div class="contact-points">
+              <div>范围明确的 90 天技术试点</div>
+              <div>采集数据前共同确定验收指标</div>
+              <div>明确的数据、发表与知识产权边界</div>
+            </div>
+          </div>
+          <form
+            class="contact-form reveal"
+            action="https://api.web3forms.com/submit"
+            method="post"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="f8a4d251-e5b0-42d9-810a-eba49d7335d9"
+            />
+            <input type="hidden" name="subject" value="ScanLine 联合试点咨询" />
+            <input type="hidden" name="from_name" value="ScanLine 网站" />
+            <input type="checkbox" name="botcheck" style="display: none" tabindex="-1" />
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">姓名</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">工作邮箱</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field field-full">
+                <label for="company">公司</label>
+                <input id="company" name="company" type="text" autocomplete="organization" />
+              </div>
+              <div class="field field-full">
+                <label for="message">工件、缺陷与当前检测瓶颈</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+            </div>
+            <button class="button button-primary" type="submit">开始交流 →</button>
+            <p class="form-note">请勿通过此表单发送保密的生产数据。</p>
+          </form>
         </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner container">
+        <span>© <span data-year>2026</span> ScanLine 智影。面向可信工业 AI。</span>
+        <span>
+          <a href="/deck/ScanLine_AI_Gemini_Startup_Forum_2026.pdf">英文 Deck</a>
+          · <a href="/" lang="en">English</a>
+        </span>
+      </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a, header nav a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
-</body>
-
+    <script src="/assets/site.js" defer></script>
+  </body>
 </html>
