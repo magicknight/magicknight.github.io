@@ -1,0 +1,10 @@
+# ScanLine
+
+> AI-native inline CT inspection for manufacturing lines — physics-informed 3D quality decisions before every part leaves the line.
+
+ScanLine builds high-speed inline industrial computed tomography (CT) and physics-informed AI reconstruction & defect-detection systems for automated manufacturing quality control.
+
+## Key Pages
+- English Home: https://scanline.cn/
+- Chinese Home (简体中文): https://scanline.cn/index_zh.html
+- Sitemap: https://scanline.cn/sitemap.xml
